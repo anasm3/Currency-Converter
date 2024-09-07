@@ -22,23 +22,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    let populateCurrencyOptions = ((rates) => {
-        for (const currency in rates) {
+    const populateCurrencyOptions = (rates) => {
+        Object.keys(rates).forEach(currency => {
             const option1 = document.createElement('option');
             option1.value = currency;
             option1.text = currency;
             inputCurrency.appendChild(option1);
-
+    
             const option2 = document.createElement('option');
             option2.value = currency;
             option2.text = currency;
             outputCurrency.appendChild(option2);
-        }
+        });
         inputCurrency.value = 'PKR';
         outputCurrency.value = 'GBP';
-    });
+    };
 
-    async function fetchExchangeRate() {
+    const fetchExchangeRate = async () => {
         try {
             const response = await fetch(apiUrl);
             const data = await response.json();
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } catch (error) {
             console.error('Error fetching exchange rate:', error);
         }
-    }
+    };
 
     let updateUI = ((exchangeRate, date) => {
         const inputAmountValue = parseFloat(inputAmount.value);
