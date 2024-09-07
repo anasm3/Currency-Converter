@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+    margin: 3em;
+}
+
+.converter {
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.converter h1 {
+    font-size: 1.5em; 
+    font-weight: normal;
+}
+
+.converter .rate {
+    font-size: 2.2em; 
+    font-weight: bold;
+}
+
+.converter .currency {
+    font-size: 1em; 
+    font-weight: normal;
+}
+
+.converter .date {
+    font-size: 1em; 
+    color: #666;
+    line-height: 4em;
+}
+
+.converter .input-group {
+    display: flex;
+}
+
+.converter .input-group input {
+    width: 8em; 
+    padding: 0.5em; 
+    font-size: 1.2em; 
+    border: 0.01em solid #ccc; 
+    border-radius: 0.2em; 
+    margin-bottom: 1em;
+}
+
+.converter .input-group select {
+    padding: 0.5em; 
+    font-size: 1.2em; 
+    border: 0.01em solid #ccc; 
+    border-radius: 0.2em; 
+    background: #fff;
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
